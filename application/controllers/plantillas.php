@@ -6,6 +6,10 @@ class Plantillas extends CI_Controller {
 	{
 		$this->load->view('plantilla');
 	}
+
+	public function drag(){
+		$this->load->view('drag');
+	}
 }
 
 
