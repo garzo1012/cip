@@ -1,0 +1,8 @@
+/* line 3, ../../sass/sass/estilo.scss */
+.titulo {
+  color: #aeaeae;
+}
+/* line 5, ../../sass/sass/estilo.scss */
+.titulo .grande {
+  font-size: 2em;
+}
