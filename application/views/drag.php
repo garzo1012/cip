@@ -55,8 +55,9 @@
 				});
 
 				$("#revisar").click(function(){
-					selt = enea.split(",");
-					alert(selt.length-1);
+					//selt = enea.split(",");
+					selt = enea.substring(0,enea.length-1)
+					alert(selt);
 					return false;
 				});
 
