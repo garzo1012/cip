@@ -15,29 +15,52 @@
 		<style type="text/css">
 			#seleccionTarjetas{
 				border: solid black;
-				height: 240px;
+				height: 310px;
 				width: 400px;
 				z-index: 0;
 			}
 
 			.tarjeta{
-				width: 60px;
-				height: 90px;
+				border: solid;
+				width: 90px;
+				height: 120px;
 				margin-bottom: 20px;
 				z-index: 1
 			}
 
+			#menuTarjetas, #revision{
+				margin-top: 20px;
+			}
+
+
 		</style>
 		<script type="text/javascript">
 			$(function(){
+				//$(".sect").hide();
+
+				var enea = "";
+				var selt;
+
 				$(".tarjeta").draggable();
 
 				$("#seleccionTarjetas").droppable({
-					drop:function(argument) {
-						alert();
+					drop:function(evt, el){
+						//alert(el.draggable.attr("value"));
+						enea = enea+el.draggable.attr("value")+",";
+					},
+					out: function(evt, el){
+						//alert(el.draggable.attr("value"));
+						enea = enea.replace(el.draggable.attr("value")+",","");
 					}
 				});
 
+				$("#revisar").click(function(){
+					selt = enea.split(",");
+					alert(selt.length-1);
+					return false;
+				});
+
+				
 			});
 		</script>
 	</head>
@@ -57,50 +80,51 @@
 			<section id="titulo">
 				<div class="row">
 					<div class="twelve columns" >
-						<h1><small>Academia CTIN</small></h1><span><h2><small>titulo</small></h2></span>
+						<h1><small>Academia CTIN</small></h1><span><h2><small>Eneagrama</small></h2></span>
 					</div>
 				</div>
 			</section>
 			<section id="contenidoPrincipal">
 				<section id="eneagrama">
 			<div class="row">
-				<div class="one columns"></div>
-				<div class="five columns" id="menuTarjetas">
-					<div class="">
+				<div class="six columns" id="menuTarjetas">
+					<div id="inT">
 						<div class="row">
 							<div class="four columns">
-								<div class="tarjeta"><img src="<?php echo $base; ?>/media/img/noimage.jpg"></div>
+								<div class="tarjeta" value="1"></div>
 							</div>
 							<div class="four columns">
-								<div class="tarjeta"><img src="<?php echo $base; ?>/media/img/noimage.jpg"></div>
+								<div class="tarjeta" value="2"></div>
 							</div>
 							<div class="four columns">
-								<div class="tarjeta"><img src="<?php echo $base; ?>/media/img/noimage.jpg"></div>
+								<div class="tarjeta" value="3"></div>
 							</div>
 						</div>
 						<div class="row" > 
 							<div class="four columns">
-								<div class="tarjeta"><img src="<?php echo $base; ?>/media/img/noimage.jpg"></div>
+								<div class="tarjeta" value="4"></div>
 							</div>
 							<div class="four columns">
-								<div class="tarjeta"><img src="<?php echo $base; ?>/media/img/noimage.jpg"></div>
+								<div class="tarjeta" value="5"></div>
 							</div>
 							<div class="four columns">
-								<div class="tarjeta"><img src="<?php echo $base; ?>/media/img/noimage.jpg"></div>
+								<div class="tarjeta" value="6"></div>
 							</div>
 						</div>
 					</div>
+
 				</div>
-				<div class="five columns">
+				<div class="six columns">
 					<div id="seleccionTarjetas">
 					</div>
 				</div>
-				<div class="one columns"></div>
 			</div>
-			<div class="row">
-				<div class="six columns"></div>
-				<div class="five columns">
-					<a href="#" class="button">Revisar</a>
+			<div class="row" id="revision">
+				<div class="one columns"></div>
+				<div class="four columns"></div>
+				<div class="five columns"></div>
+				<div class="one columns">
+					<a href="#" class="button" id="revisar">Revisar</a>
 				</div>
 				<div class="one columns"></div>
 			</div>
