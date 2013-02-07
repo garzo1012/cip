@@ -3,9 +3,9 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>CTIN</title>
-		<link rel="stylesheet" href="../media/css/foundation.min.css">
-		<link rel="stylesheet" href="../media/css/estiloPlantilla.css">
-		<script src="../media/js/foundation/modernizr.foundation.js"></script>
+		<link rel="stylesheet" href="<?=base_url()?>media/css/foundation.min.css">
+		<link rel="stylesheet" href="<?=base_url()?>media/css/estiloPlantilla.css">
+		<script src="<?=base_url()?>media/js/foundation/modernizr.foundation.js"></script>
 	</head>
 	<body>
 		<div id="contenedorGral">
@@ -13,9 +13,9 @@
 				<div class="row" id="encabezado">
 					<div class="twelve">
 						<div id="logo">
-							<a href="#"><img src="../media/img/CTIN.png"></a>
-							<a href="#" class="isocial"><img src="../media/img/twitter_32.png"></a>
-							<a href="#" class="isocial"><img src="../media/img/facebook_32.png"></a>
+							<a href="#"><img src="<?=base_url()?>media/img/CTIN.png"></a>
+							<a href="#" class="isocial"><img src="<?=base_url()?>media/img/twitter_32.png"></a>
+							<a href="#" class="isocial"><img src="<?=base_url()?>media/img/facebook_32.png"></a>
 						</div>
 					</div>
 				</div>	
