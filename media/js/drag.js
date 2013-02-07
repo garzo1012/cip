@@ -35,8 +35,10 @@
 				$("#next").click(function(evt){
 					evt.preventDefault();
 					if(contador<16){
-						$(".tarsec").hide();
+
+						$(".ene"+(contador-1)).hide();
 						$(".gt"+contador).show();
+
 						contador++;
 					}
 				});
