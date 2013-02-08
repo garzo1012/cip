@@ -3,23 +3,28 @@
 				$(".gt1").show();
 
 				var enea = "";
-				var selt;
+				var selt,x = 250,y=600;
 				var contador =2;
 
-				$(".tarsec").dblclick(function(){
-					alert();
-				});
+				function intervalo(from,to){
+					return Math.floor(Math.random()*(to-from+1)+from);
+				}
 
 				$(".tarjeta").draggable();
 
 				$("#seleccionTarjetas").droppable({
 					drop:function(evt, el){
 						enea = enea+el.draggable.attr("value")+",";
-						el.draggable.removeClass("tarsec");
+						elemento = el.draggable.clone();
+						elemento.removeClass("gt"+(contador-1));
+						el.draggable.remove();
+						$("#seleccionTarjetas").append(elemento);
+						$(elemento).draggable();
+						$(elemento).offset({ top: intervalo(250,400), left: intervalo(600,900)});
 					},
 					out: function(evt, el){
 						enea = enea.replace(el.draggable.attr("value")+",","");
-						el.draggable.addClass("tarsec");
+						el.draggable.addClass("salido");
 					}
 				});
 
@@ -35,7 +40,8 @@
 				$("#next").click(function(evt){
 					evt.preventDefault();
 					if(contador<16){
-						$(".tarsec").hide();
+						$(".salido").remove();
+						$(".gt"+(contador-1)).remove();
 						$(".gt"+contador).show();
 						contador++;
 					}

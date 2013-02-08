@@ -15,6 +15,12 @@ class Plantillas extends CI_Controller {
 		$data['tarjetas']=$tarjetas;
 		$this->load->view('drag',$data,$tarjetas);
 	}
+
+	public function enea(){		
+        $this->load->model('eneagrama');
+		$data["eneatipo"] = $this->eneagrama->get_eneatipo($this->uri->segment(3));
+		$this->load->view('eneatipo',$data);
+	}
 }
 
 

@@ -9,6 +9,7 @@
 		<script src="<?php echo $base; ?>/media/js/jquery-1.9.0.js"></script>
 		<script src="<?php echo $base; ?>/media/js/jquery-ui-1.10.0.custom.js"></script>
 		<script src="<?php echo $base; ?>/media/js/drag.js"></script>
+		<script src="<?php echo $base; ?>/media/js/foundation/jquery.foundation.reveal.js"></script>
 	</head>
 	<body>
 		<div id="contenedorGral">
@@ -30,6 +31,11 @@
 					</div>
 				</div>
 			</section>
+			<div id="myModal" class="reveal-modal">  
+				<h2 id="paltar">You are reading w3resource tutorials.</h2>  
+				<p class="lead" id="desctar">We offer web development tutorials.</p>  
+				<a class="close-reveal-modal">×</a>  
+			</div>  
 			<section id="contenidoPrincipal">
 				<section id="eneagrama">
 			<div class="row">
@@ -41,24 +47,24 @@
 							echo "
 									<div class='row'>
 										<div class='four columns'>
-											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$cont."</div>
+											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$tarjetas['t'.$cont]['palabra']."</div>
 										</div>
 										<div class='four columns'>
-											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$cont."</div>
+											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$tarjetas['t'.$cont]['palabra']."</div>
 										</div>
 										<div class='four columns'>
-											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$cont."</div>
+											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$tarjetas['t'.$cont]['palabra']."</div>
 										</div>
 									</div>
 									<div class='row'> 
 										<div class='four columns'>
-											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$cont."</div>
+											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$tarjetas['t'.$cont]['palabra']."</div>
 										</div>
 										<div class='four columns'>
-											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$cont."</div>
+											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$tarjetas['t'.$cont]['palabra']."</div>
 										</div>
 										<div class='four columns'>
-											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$cont."</div>
+											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$tarjetas['t'.$cont]['palabra']."</div>
 										</div>
 									</div>
 							";
