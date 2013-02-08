@@ -18,6 +18,7 @@
         }
 
         public function registrar(){
+            
             $this->form_validation->set_rules('email', 'Email', 'required');
             $this->form_validation->set_rules('pass', 'Password', 'required');
                 if($this->form_validation->run() == FALSE){
@@ -44,6 +45,7 @@
                     $this->load->view('login');
                     }
                 }
+            
         }
      
     }

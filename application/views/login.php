@@ -1,5 +1,6 @@
 <?php
 	$base =  base_url();
+	$perro = "alaa";
 ?>
 
 <html>
@@ -9,10 +10,13 @@
 		<title>CTIN</title>
 		<link rel="stylesheet" href="<?php echo $base; ?>/media/css/foundation.min.css">
 		<link rel="stylesheet" href="<?php echo $base; ?>/media/css/estiloPlantilla.css">
+		<script src="<?php echo $base; ?>/media/js/jquery-1.9.0.js"></script>
 		<script src="<?php echo $base; ?>/media/js/foundation/modernizr.foundation.js"></script>
-		<script type="text/javascript">
-			alert(<?php echo $base ?>);
-		</script>
+			<script type='text/javascript'>
+				$(function(){
+					alert($("#errores").val());
+				});
+			</script>
 	</head>
 	<body>
 		<div id="contenedorGral">
@@ -42,12 +46,13 @@
 								<form class="custom">  
 							        <fieldset>  
 							            <legend>Inicia Sesión</legend>
+							            <label type="hidden" value="<?php echo form_error('email'); ?>" id="errores" ></label>
 										<label for="error">Correo electrónico:</label>
 										<input type="text" placeholder="correo@host.com" name="email">
-										<small class="error" id="error"><?php echo validation_errors(); ?></small>
+										<small class="error" id="errorc"><?php echo validation_errors(); ?></small>
 										<label for="error">Contraseña:</label>
 										<input type="password" name="pass">
-										<small class="error" id="error"><?php echo validation_errors(); ?></small>
+										<small class="error" id="errorp"><?php echo validation_errors(); ?></small>
 										<input type="submit" class="button secondary radius" value="Iniciar Sesión">
 							        </fieldset>  
 							    </form>
