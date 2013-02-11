@@ -3,13 +3,13 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width" />
 		<title>CTIN</title>
-		<link rel="stylesheet" href="<?php echo $base; ?>/media/css/foundation.min.css">
-		<link rel="stylesheet" href="<?php echo $base; ?>/media/css/estiloPlantilla.css">
-		<link rel="stylesheet" href="<?php echo $base; ?>/media/css/drag.css">
-		<script src="<?php echo $base; ?>/media/js/jquery-1.9.0.js"></script>
-		<script src="<?php echo $base; ?>/media/js/jquery-ui-1.10.0.custom.js"></script>
-		<script src="<?php echo $base; ?>/media/js/drag.js"></script>
-		<script src="<?php echo $base; ?>/media/js/foundation/jquery.foundation.reveal.js"></script>
+		<link rel="stylesheet" href="<?=$base;?>/media/css/foundation.min.css">
+		<link rel="stylesheet" href="<?=$base;?>/media/css/estiloPlantilla.css">
+		<link rel="stylesheet" href="<?=$base;?>/media/css/drag.css">
+		<script src="<?=$base;?>/media/js/jquery-1.9.0.js"></script>
+		<script src="<?=$base;?>/media/js/jquery-ui-1.10.0.custom.js"></script>
+		<script src="<?=$base;?>/media/js/drag.js"></script>
+		<script src="<?=$base;?>/media/js/foundation/jquery.foundation.reveal.js"></script>
 	</head>
 	<body>
 		<div id="contenedorGral">
@@ -17,9 +17,9 @@
 				<div class="row" id="encabezado">
 					<div class="twelve">
 						<div id="logo">
-							<a href="#"><img src="<?php echo $base; ?>/media/img/CTIN.png"></a>
-							<a href="#" class="isocial"><img src="<?php echo $base; ?>/media/img/twitter_32.png"></a>
-							<a href="#" class="isocial"><img src="<?php echo $base; ?>/media/img/facebook_32.png"></a>
+							<a href="#"><img src="<?=$base;?>/media/img/CTIN.png"></a>
+							<a href="#" class="isocial"><img src="<?=$base;?>/media/img/twitter_32.png"></a>
+							<a href="#" class="isocial"><img src="<?=$base;?>/media/img/facebook_32.png"></a>
 						</div>
 					</div>
 				</div>	
@@ -45,7 +45,7 @@
 						$sec = 1;
 						while ($sec<16) {
 							echo "
-									<div class='row'>
+									<div class='row 1".$sec."'>
 										<div class='four columns'>
 											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$tarjetas['t'.$cont]['palabra']."</div>
 										</div>
@@ -56,7 +56,7 @@
 											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$tarjetas['t'.$cont]['palabra']."</div>
 										</div>
 									</div>
-									<div class='row'> 
+									<div class='row 1".$sec."'> 
 										<div class='four columns'>
 											<div class='tarjeta tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">".$tarjetas['t'.$cont]['palabra']."</div>
 										</div>
@@ -68,30 +68,6 @@
 										</div>
 									</div>
 							";
-							/*echo "
-									<div class='row'>
-										<div class='four columns drag tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">
-											<div class='tarjeta'>".$cont."</div>
-										</div>
-										<div class='four columns drag tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">
-											<div class='tarjeta'>".$cont."</div>
-										</div>
-										<div class='four columns drag tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">
-											<div class='tarjeta'>".$cont."</div>
-										</div>
-									</div>
-									<div class='row'> 
-										<div class='four columns drag tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">
-											<div class='tarjeta'>".$cont."</div>
-										</div>
-										<div class='four columns drag tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">
-											<div class='tarjeta'>".$cont."</div>
-										</div>
-										<div class='four columns drag tarsec gt".$sec."' value=".$tarjetas['t'.++$cont]['id'].">
-											<div class='tarjeta'>".$cont."</div>
-										</div>
-									</div>
-							";*/
 							$sec++;
 						}
 					?>

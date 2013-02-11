@@ -19,6 +19,7 @@
 					<div class="twelve">
 						<div id="logo">
 							<a href="#"><img src="<?php echo $base; ?>/media/img/CTIN.png"></a>
+							<a href="<?php echo $base; ?>index.php/login/salir" class="isocial"><img src="<?php echo $base; ?>/media/img/logout.png"></a>
 							<a href="#" class="isocial"><img src="<?php echo $base; ?>/media/img/twitter_32.png"></a>
 							<a href="#" class="isocial"><img src="<?php echo $base; ?>/media/img/facebook_32.png"></a>
 						</div>

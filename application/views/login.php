@@ -1,6 +1,5 @@
 <?php
 	$base =  base_url();
-	$perro = "alaa";
 ?>
 
 <html>
@@ -14,7 +13,7 @@
 		<script src="<?php echo $base; ?>/media/js/foundation/modernizr.foundation.js"></script>
 			<script type='text/javascript'>
 				$(function(){
-					alert($("#errores").val());
+					//alert($("#errores").val());
 				});
 			</script>
 	</head>
@@ -42,17 +41,16 @@
 				<section class="formulario">
 					<div class="row">  
 						<div class="six columns centered">
-    						<? echo form_open('login/registrar');?>  
+    						<? echo form_open('login/index');?>  
 								<form class="custom">  
 							        <fieldset>  
 							            <legend>Inicia Sesión</legend>
-							            <label type="hidden" value="<?php echo form_error('email'); ?>" id="errores" ></label>
 										<label for="error">Correo electrónico:</label>
 										<input type="text" placeholder="correo@host.com" name="email">
-										<small class="error" id="errorc"><?php echo validation_errors(); ?></small>
+										<small id="errorc" style="color:red"><?php echo form_error('email'); ?></small>
 										<label for="error">Contraseña:</label>
 										<input type="password" name="pass">
-										<small class="error" id="errorp"><?php echo validation_errors(); ?></small>
+										<small id="errorp" style="color:red"><?php echo form_error('pass'); ?></small>
 										<input type="submit" class="button secondary radius" value="Iniciar Sesión">
 							        </fieldset>  
 							    </form>

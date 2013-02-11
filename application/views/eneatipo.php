@@ -1,5 +1,4 @@
 <?php
-	$this->load->helper('url');
 	$base =  base_url();
 ?>
 
@@ -9,8 +8,7 @@
 		<meta name="viewport" content="width=device-width" />
 		<title>Academia CTIN</title>
 
-        <?php        
-		$base =  base_url();
+        <?php
         require 'media/php/lessc.inc.php';
         $carpeta_in = "media/less/";
         $carpeta_out = "media/css/";

@@ -41,7 +41,7 @@
 					evt.preventDefault();
 					if(contador<16){
 						$(".salido").remove();
-						$(".gt"+(contador-1)).remove();
+						$(".1"+(contador-1)).remove();
 						$(".gt"+contador).show();
 						contador++;
 					}

@@ -1,7 +1,4 @@
 <?php
-	/**
-	* 
-	*/
 	class Tarjetasbd extends CI_Model
 	{
 		
