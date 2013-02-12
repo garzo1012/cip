@@ -1,21 +1,21 @@
 .caract {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .centro-i {
   font-family: 'Ubuntu', sans-serif;
   color: #2F9C41;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .centro-r {
   font-family: 'Ubuntu', sans-serif;
   color: #3F3ACB;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .centro-e {
   font-family: 'Ubuntu', sans-serif;
   color: #D51A1A;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .desc-c {
   text-align: center;
@@ -23,7 +23,7 @@
 .desc-e {
   font-family: 'Ubuntu', sans-serif;
   text-align: justify;
-  font-size: 1.2em;
+  font-size: 1.1em;
 }
 .nombre-e {
   font-family: 'Ubuntu', sans-serif;
@@ -61,7 +61,7 @@
 }
 .num-e {
   font-family: 'Ubuntu', sans-serif;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-size: 1.3em;
   text-align: center;
 }
