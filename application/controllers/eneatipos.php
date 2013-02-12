@@ -1,5 +1,11 @@
 <?php
 class Eneatipos extends CI_Controller {
+
+
+	public function index(){		
+		$this->load->view('enea-intro');
+	}
+
 	public function desc(){		
         $this->load->model('eneagrama');
 		$data["eneatipo"] = $this->eneagrama->get_eneatipo($this->uri->segment(3));
