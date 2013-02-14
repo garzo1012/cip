@@ -1,0 +1,36 @@
+<?php
+
+/*
+ * To change this template, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ * Description of info_model
+ *
+ * @author America Movil
+ */
+class tgp_model extends CI_Model {
+
+	function revisión() {
+
+		$rt = $this->input->post("q11")+$this->input->post("q12")+$this->input->post("q13")+$this->input->post("q14");
+		$ds = $this->input->post("q21")+$this->input->post("q22")+$this->input->post("q23")+$this->input->post("q24");
+		$pr = $this->input->post("q31")+$this->input->post("q32")+$this->input->post("q33")+$this->input->post("q34");
+		$in = $this->input->post("q41")+$this->input->post("q42")+$this->input->post("q43")+$this->input->post("q44");
+		$rf = $this->input->post("q51")+$this->input->post("q52")+$this->input->post("q53")+$this->input->post("q54");
+		$df = $this->input->post("q61")+$this->input->post("q62")+$this->input->post("q63")+$this->input->post("q64");
+		$cf = $this->input->post("q71")+$this->input->post("q72")+$this->input->post("q73")+$this->input->post("q74");
+		$fi = $this->input->post("q81")+$this->input->post("q82")+$this->input->post("q83")+$this->input->post("q84");
+		foreach ($usuarios as $valor) {
+			$dato = array(
+				"id_Usuario" => $usuarios[$cont],
+				"id_Matadero" => $lastidmatadero
+			);
+			$this->db->insert('c2_matadero_has_usuarios', $dato);
+			$cont++;
+		}
+	}
+}
+
+?>
