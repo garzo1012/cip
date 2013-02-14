@@ -21,6 +21,10 @@ class Plantillas extends CI_Controller {
 		$data["eneatipo"] = $this->eneagrama->get_eneatipo($this->uri->segment(3));
 		$this->load->view('eneatipo',$data);
 	}
+        
+        public function navegacion(){
+            $this->load->view("plantilla_view");
+        }
 }
 
 
