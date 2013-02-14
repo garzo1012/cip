@@ -88,6 +88,12 @@
 							<p class="<?=$fiest?>"><?=$fi?></p>
 						</div>
 					</div>
+					<div class="row">
+						<div class="twelve columns">
+							<hr>
+							<a href="<?=base_url()?>gestalt">Volver</a>
+						</div>
+					</div>
 				</section>
 			</section>
 		</div>
