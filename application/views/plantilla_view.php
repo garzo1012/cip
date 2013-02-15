@@ -4,6 +4,7 @@ $base = base_url();
 ?>
 <script src="<?=base_url()?>media/js/modernizr.js"></script>
 <link rel="stylesheet" type="text/css" href="<?= base_url() ?>media/css/plantilla.css">
+<link rel="stylesheet" href="<?= base_url() ?>media/css/foundation.min.css">
 </head>
 <body>
     <div id="outer-wrap">

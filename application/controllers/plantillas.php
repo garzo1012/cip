@@ -22,9 +22,19 @@ class Plantillas extends CI_Controller {
 		$this->load->view('eneatipo',$data);
 	}
         
-        public function navegacion(){
-            $this->load->view("plantilla_view");
-        }
+    public function navegacion(){
+        $this->load->view("plantilla_view");
+    }
+
+    public function navegacion2(){
+    	$this->load->helper('url');
+		$data['base'] =  base_url();
+		$this->load->model('tarjetasbd');
+		$tarjetas = $this->tarjetasbd->getTarjetas();
+		$data['tarjetas']=$tarjetas;
+		$this->load->view('newdrag',$data,$tarjetas);
+    }
+
 }
 
 
