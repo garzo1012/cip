@@ -5,6 +5,10 @@ class Eneatipos extends CI_Controller {
 		$data["eneatipo"] = $this->eneagrama->get_eneatipo($this->uri->segment(3));
 		$this->load->view('eneatipo',$data);
 	}
+
+	public function analisis(){
+		echo "alaa";
+	}
 }
 
 

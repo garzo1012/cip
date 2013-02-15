@@ -6,8 +6,10 @@ $(function() {
 
 	function par(){
 		$(".del").click(function(){
+			var dato = $(this).parent().attr("value");
+			enea = enea.replace(dato+",","");
 			$(this).parent().remove();
-			if (enea.split(",").length-1 < 6) {
+			if (enea.split(",").length-1 < 15) {
 				$("#paloma").hide();
 			}
 		});
@@ -77,7 +79,7 @@ $(function() {
 				$(".del").hide();
 				mdel();
 				par();
-				if (enea.split(",").length-1 > 5) {
+				if (enea.split(",").length-1 >= 15) {
 					$("#paloma").show();
 				}
 				
@@ -85,9 +87,9 @@ $(function() {
 		}
 	});
 
-	$("#paloma").click(function(){
-		alert(enea.split(",").length-1);
-	});
+        $("#paloma").click(function(){
+        	alert(enea);
+        });
 
 
 });

@@ -53,15 +53,15 @@ $base = base_url();
 
                                     $sec = 1;
                                     $cont = 0;
-                                    while ($sec<16) {
+                                    while ($sec<19) {
                                         echo "
                                             <div class='baraja bar' id='b{$sec}'>
                                                 <ul id='baraja-el{$sec}' class='baraja-cont'>
-                                                    <li value='{$tarjetas[++$cont]['tipo']}' class='sele'><h4>{$tarjetas[$cont]['palabra']}</h4></li>
-                                                    <li value='{$tarjetas[++$cont]['tipo']}' class='sele'><h4>{$tarjetas[$cont]['palabra']}</h4></li>
-                                                    <li value='{$tarjetas[++$cont]['tipo']}' class='sele'><h4>{$tarjetas[$cont]['palabra']}</h4></li>
-                                                    <li value='{$tarjetas[++$cont]['tipo']}' class='sele'><h4>{$tarjetas[$cont]['palabra']}</h4></li>
-                                                    <li value='{$tarjetas[++$cont]['tipo']}' class='sele'><h4>{$tarjetas[$cont]['palabra']}</h4></li>
+                                                    <li value='{$tarjetas[++$cont]['id']}' class='sele'><h4>{$tarjetas[$cont]['palabra']}</h4></li>
+                                                    <li value='{$tarjetas[++$cont]['id']}' class='sele'><h4>{$tarjetas[$cont]['palabra']}</h4></li>
+                                                    <li value='{$tarjetas[++$cont]['id']}' class='sele'><h4>{$tarjetas[$cont]['palabra']}</h4></li>
+                                                    <li value='{$tarjetas[++$cont]['id']}' class='sele'><h4>{$tarjetas[$cont]['palabra']}</h4></li>
+                                                    <li value='{$tarjetas[++$cont]['id']}' class='sele'><h4>{$tarjetas[$cont]['palabra']}</h4></li>
                                                 </ul>
                                             </div>
                                         ";
